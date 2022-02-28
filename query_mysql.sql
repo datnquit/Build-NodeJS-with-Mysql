@@ -11,3 +11,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   password varchar(255) NOT NULL,
   email varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE users
+ADD email_verified_at TIMESTAMP

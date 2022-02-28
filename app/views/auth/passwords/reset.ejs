@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="login-form">
+        <h1>Reset Form</h1>
+        <form action="/password/reset" method="POST">
+            <input type="hidden" value="<%= token %>" name="token">
+            <input type="text" name="email" placeholder="Email" value="<%= email %>" required readonly>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

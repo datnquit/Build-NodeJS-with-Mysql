@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form Tutorial</title>
+    <title>Forgot password</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="login-form">
-        <h1>Login Form</h1>
-        <form action="/login" method="POST">
+        <h1>Forgot Form</h1>
+        <form action="/password/email" method="POST">
             <input type="text" name="email" placeholder="Email" 
                 <% if (typeof email != "undefined" && email) { %> value="<%= email %>"<% } %>  required>
-            <input type="password" name="password" placeholder="Password" 
-                <% if (typeof password != "undefined" && password) { %> value="<%= password %>"<% } %> required>
-            <% if (typeof conflictError != "undefined" && conflictError) { %>
-                <div class="text-danger text-left  mb-3"><%= conflictError %></div>
-            <% } %>
             <input type="submit">
         </form>
     </div>
