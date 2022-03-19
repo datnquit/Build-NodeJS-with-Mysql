@@ -56,7 +56,11 @@ exports.update = (req, res) => {
     if (!req.body) {
         res.redirect('/todo/edit/' + req.params.id + '?status=error')
     }
-
+    if (req.body.published == 'on') {
+        req.body.published = true;
+    } else {
+        req.body.published = false;
+    }
     Todo.updateById(
         req.params.id,
         new Todo(req.body),
